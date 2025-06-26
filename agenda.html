@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Agenda</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    input, button {
+      padding: 8px;
+      margin: 5px 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .agenda-list {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background: white;
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 8px;
+    }
+    th {
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gerador de Agenda</h1>
+  <form id="agenda-form">
+    <input type="text" id="data" placeholder="Data (ex: 10/07/2025)" required>
+    <input type="text" id="evento" placeholder="Evento" required>
+    <input type="text" id="local" placeholder="Local" required>
+    <button type="submit">Adicionar Evento</button>
+  </form>
+
+  <div class="agenda-list">
+    <h2>Agenda Atual</h2>
+    <table id="agenda-table">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Evento</th>
+          <th>Local</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <button onclick="gerarArquivo()">📄 Gerar agenda_resultado.html</button>
+
+  <script>
+    const form = document.getElementById("agenda-form");
+    const tableBody = document.querySelector("#agenda-table tbody");
+    let eventos = [];
+
+    form.onsubmit = function(e) {
+      e.preventDefault();
+      const data = document.getElementById("data").value;
+      const evento = document.getElementById("evento").value;
+      const local = document.getElementById("local").value;
+
+      eventos.push({ data, evento, local });
+      atualizarTabela();
+      form.reset();
+    };
+
+    function atualizarTabela() {
+      tableBody.innerHTML = "";
+      eventos.forEach(ev => {
+        const row = document.createElement("tr");
+        row.innerHTML = `<td>${ev.data}</td><td>${ev.evento}</td><td>${ev.local}</td>`;
+        tableBody.appendChild(row);
+      });
+    }
+
+    function gerarArquivo() {
+      let linhas = eventos.map(ev => `<tr><td>${ev.data}</td><td>${ev.evento}</td><td>${ev.local}</td></tr>`).join("\n");
+      const conteudo = `
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Agenda</title>
+  <style>
+    body { font-family: Arial; background: #111; color: #fff; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #555; padding: 10px; }
+    th { background: #222; }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">Agenda</h2>
+  <table>
+    <thead>
+      <tr><th>Data</th><th>Evento</th><th>Local</th></tr>
+    </thead>
+    <tbody>
+      ${linhas}
+    </tbody>
+  </table>
+</body>
+</html>`;
+      const blob = new Blob([conteudo], {type: "text/html"});
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "agenda_resultado.html";
+      link.click();
+    }
+  </script>
+</body>
+</html>
