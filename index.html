@@ -1,239 +1,243 @@
 <!DOCTYPE html>
-
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Joyce Basso</title>
-<link href="favicon.ico" rel="icon" type="image/x-icon"/>
-<style>
-    body { margin: 0; font-family: Arial, sans-serif; background-color: #111; color: white; }
-    section { padding: 60px 20px; text-align: center; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joyce Basso</title>
+  <link rel="icon" type="image/png" href="img/LOGO JOYCE_.PNG" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    .menu a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
     header {
-      background: url('img/IMG_4096.jpg') center top/contain no-repeat;
-      height: 100vh; display: flex; flex-direction: column;
-      justify-content: center; align-items: flex-end; text-align: right;
-      padding-right: 40px; box-sizing: border-box;
-    }
-    header h1 { font-size: 3em; margin: 0; }
-    .logo { position: absolute; top: 20px; left: 20px; height: 50px; }
-    .social-buttons { margin-top: 40px; }
-    .social-buttons a {
-      margin: 5px; padding: 10px 20px;
-      background: rgba(255, 255, 255, 0.1);
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-    }
-    .section-bio {
-      background: url('img/Foto (3 de 28).JPG') center/cover no-repeat;
+      background: url('img/IMG_0661-Crp.png') top center/cover no-repeat;
+      height: 100vh;
       position: relative;
-      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-    .section-bio .content {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 30px;
-      max-width: 700px;
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      height: 60px;
+    }
+    .bio {
+      background: url('img/Foto (3 de 28).JPG') center/cover no-repeat;
+      color: white;
+      padding: 80px 30px;
+      background-blend-mode: darken;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .bio p {
+      font-size: 1.2rem;
+      max-width: 900px;
       margin: auto;
-      border-radius: 12px;
-      font-size: 1.1em;
+      line-height: 1.6;
     }
-    .section-frase {
-      background: url('img/IMG_JB_PWR.jpeg') top/cover no-repeat;
-      padding: 80px 20px;
-      font-family: "Matura MT Script Capitals", cursive;
-      font-size: 1.8em;
-      background-blend-mode: overlay;
-      background-color: rgba(0,0,0,0.5);
+    .bio .extra {
+      text-align: right;
+      margin-top: 20px;
     }
-    .section-lancamentos {
+    .dupla {
       display: flex;
-      flex-wrap: wrap-reverse;
       align-items: center;
-      justify-content: center;
-      gap: 40px;
-      padding: 60px 20px;
-      background-color: #000;
-    }
-    .section-lancamentos img {
-      max-width: 350px;
-      border-radius: 10px;
-    }
-    .section-lancamentos .buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .section-lancamentos .buttons a {
-      background: #333;
-      color: white;
-      padding: 12px 20px;
-      text-decoration: none;
-      border-radius: 6px;
-    }
-    .section-lancamentos .descricao {
-      font-style: italic;
-      color: #f0f0f0;
-      margin-bottom: 20px;
-    }
-    .section-agenda {
-      background-color: black;
-      padding: 60px 20px;
-    }
-    .section-agenda iframe {
-      width: 100%; height: 300px; border: none;
-    }
-    .section-contato {
-      background-color: #111;
-      color: white;
-      padding: 60px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+      background-color: #f2f2f2;
       flex-wrap: wrap;
-      gap: 40px;
     }
-    .section-contato form {
+    .dupla img {
+      max-width: 350px;
+      border-radius: 12px;
+    }
+    .dupla .texto {
+      max-width: 600px;
+      font-size: 1rem;
+    }
+    .dupla .texto small {
+      display: block;
+      text-align: right;
+      margin-top: 15px;
+    }
+    .alcança {
+      background: url('img/01 Foto cut.png') center/cover no-repeat;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .alcança h2 {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+    .alcança .dados {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      font-size: 2.5rem;
+    }
+    .alcança .botoes img {
+      width: 40px;
+      margin: 0 10px;
+    }
+    .lancamentos {
+      background: #000;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 30px;
+      flex-wrap: wrap;
+    }
+    .lancamentos img {
+      max-width: 400px;
+    }
+    .lancamentos .btns {
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
-    .section-contato input, .section-contato textarea {
-      padding: 10px;
-      width: 250px;
-      border-radius: 5px;
-      border: none;
-    }
-    .section-contato input[type="submit"] {
-      background: #333; color: white; cursor: pointer;
-    }
-    .whatsapp-button {
-      background: #25D366;
+    .agenda {
+      background-color: black;
       color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      display: inline-block;
-      margin-bottom: 20px;
+      padding: 40px 20px;
+      text-align: center;
     }
-    .section-galeria {
-      background-color: #222;
-      padding: 60px 20px;
+    .agenda iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 20px;
     }
     .galeria {
+      background-color: #eee;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
-      justify-content: center;
+      gap: 10px;
+      padding: 40px;
     }
-    .galeria a img {
+    .galeria img {
       width: 100%;
-      border: 3px solid white;
-      border-radius: 10px;
-      transition: transform 0.3s;
-    }
-    .galeria a img:hover {
-      transform: scale(1.08);
+      border-radius: 8px;
     }
     footer {
-      background: #111; color: white; padding: 30px 10px; text-align: center;
-    }
-    .footer-links a {
-      background: #333;
+      background-color: #222;
       color: white;
-      padding: 8px 16px;
-      margin: 4px;
-      display: inline-block;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
+      text-align: center;
+      padding: 20px;
     }
-    .copyright {
-      font-size: 0.9em; margin-top: 20px;
-    }
-    .logo-rodape {
-      height: 30px; margin-top: 10px;
+    footer img {
+      width: 120px;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-<header>
-<img alt="Logo Joyce" class="logo" src="img/LOGO JOYCE.PNG"/>
-<h1>Joyce Basso</h1>
-<div class="social-buttons">
-<a href="https://open.spotify.com/intl-pt/artist/2MVStW95WljhxqvaOlINlo?si=6ipEcR8uQi6ExEEiN4KTqg" target="_blank">Spotify</a>
-<a href="https://www.youtube.com/@joycebasso" target="_blank">YouTube</a>
-<a href="https://www.instagram.com/joycebasso" target="_blank">Instagram</a>
-<a href="https://wa.me/5531993063266" target="_blank">WhatsApp</a>
-</div>
-</header>
-<section class="section-bio">
-<div class="content">
-<h2>Bio</h2>
-<p>Joyce Basso é cantora, compositora e pastora na Power Church em Belo Horizonte.
-    Com uma voz marcante e um talento lapidado desde a infância na igreja, Joyce Basso vem se destacando na música gospel brasileira.</p>
-<p>Cantora desde pequena, Joyce começou sua trajetória gravando em estúdios e atuando como backing-vocal em diversos projetos.</p>
-<p>Hoje, como pastora auxiliar na Power Church em Belo Horizonte — uma igreja relevante que tem alcançado e influenciado milhares de pessoas pelo Brasil.</p>
-<p><strong>Joyce segue firme em seu chamado, tocando profundamente o coração de quem a ouve.</strong></p>
-<hr/>
-<p>Sua Igreja: Power Church<br/>Pastores: Bp. Carlos Damasceno e Bpa. Dannicoly Damasceno<br/>Sua Cidade: Belo Horizonte</p>
-</div>
-</section>
-<section class="section-frase">
-  “Amo servir minha igreja local e estar coberta pelos meus pais espirituais que me enviam para cumprir meu chamado pelo Brasil”
-</section>
-<section class="section-lancamentos">
-<div class="buttons">
-<div class="descricao">Bondade de Deus alcançou mais de 3 milhões no YouTube 100% orgânico. ❤️</div>
-<a href="https://www.youtube.com/watch?v=SFrnX8bLqKs" target="_blank">Assista Agora</a>
-<a href="https://www.youtube.com/watch?v=Y9eGuXtshNI" target="_blank">Santo Pra Sempre</a>
-<a href="https://www.youtube.com/watch?v=WCVFg1CkNvo&amp;list=PL_3mX5zD6f7MWLsTqH658b19sFCt0Sf8e" target="_blank">Nossa Casa Playlist</a>
-<a href="https://open.spotify.com/intl-pt/artist/2MVStW95WljhxqvaOlINlo?si=6ipEcR8uQi6ExEEiN4KTqg" target="_blank">Spotify</a>
-<a href="https://www.youtube.com/@joycebasso" target="_blank">YouTube</a>
-</div>
-<img alt="Lançamento Principal" src="img/LANÇAMENTOS JB.png">
-</img></section>
-<section class="section-agenda">
-<h2>Agenda</h2>
-<img alt="Agenda" src="img/IMG_6898_jpg.jpg" style="width: 200px; float: left; margin-right: 20px; opacity: 0.6; border-radius: 8px;"/>
-<iframe src="agenda_resultado.html"></iframe>
-</section>
-<section class="section-contato">
-<div>
-<a class="whatsapp-button" href="https://wa.me/5531993063266" target="_blank">Clique e entre em contato já!</a>
-<form action="mailto:jmcontato04@gmail.com" enctype="text/plain" method="POST">
-<input name="nome" placeholder="Nome" required="" type="text"/>
-<input name="email" placeholder="E-mail" required="" type="email"/>
-<input name="telefone" placeholder="Telefone" type="tel"/>
-<textarea name="mensagem" placeholder="Digite sua mensagem..." required="" rows="5"></textarea>
-<input type="submit" value="Enviar">
-</input></form>
-</div>
-<img alt="Contato" src="img/IMG_0405.jpg" style="max-width: 250px; border-radius: 10px;"/>
-</section>
-<section class="section-galeria">
-<h2>Galeria</h2>
-<div class="galeria">
-<a href="img/IMG_9536_jpg.jpg" target="_blank"><img src="img/IMG_9536_jpg.jpg"/></a>
-<a href="img/IMG_0593.jpg" target="_blank"><img src="img/IMG_0593.jpg"/></a>
-<a href="img/IMG_JB_PWR.jpeg" target="_blank"><img src="img/IMG_JB_PWR.jpeg"/></a>
-<a href="img/IMG_0655.jpg" target="_blank"><img src="img/IMG_0655.jpg"/></a>
-<a href="img/IMG_0582.jpg" target="_blank"><img src="img/IMG_0582.jpg"/></a>
-<a href="img/Foto (3 de 28).JPG" target="_blank"><img src="img/Foto (3 de 28).JPG"/></a>
-<a href="img/DSC_0437.JPG" target="_blank"><img src="img/DSC_0437.JPG"/></a>
-<a href="img/01 FOTO.png" target="_blank"><img src="img/01 FOTO.png"/></a>
-<a href="img/IMG_6898_jpg.jpg" target="_blank"><img src="img/IMG_6898_jpg.jpg"/></a>
-</div>
-</section>
-<footer>
-<div class="footer-links">
-<a href="https://www.instagram.com/joycebasso" target="_blank">Instagram</a>
-<a href="https://www.instagram.com/powerchurch_oficial/" target="_blank">Power Church</a>
-</div>
-<p class="copyright">© Joyce Basso - Todos os direitos reservados.<br/>JM Produções Musicais</p>
-<img alt="Logo Joyce" class="logo-rodape" src="img/LOGO JOYCE_.PNG"/>
-</footer>
+  <nav class="menu">
+    <a href="#home">HOME</a>
+    <a href="#bio">BIO</a>
+    <a href="#contato">CONTATO</a>
+    <a href="#lancamentos">LANÇAMENTOS</a>
+    <a href="#agenda">AGENDA</a>
+  </nav>
+
+  <header id="home">
+    <img src="img/LOGO JOYCE_.PNG" class="logo" alt="Logo Joyce" />
+  </header>
+
+  <section id="bio" class="bio">
+    <p>Joyce Basso é cantora, compositora e pastora na Power Church em Belo Horizonte.</p>
+    <p>Cantora desde pequena, Joyce começou sua trajetória gravando em estúdios e atuando como backing-vocal em diversos projetos.</p>
+    <p>Hoje, como pastora auxiliar na Power Church em Belo Horizonte — uma igreja relevante que tem alcançado e influenciado milhares de pessoas pelo Brasil.</p>
+    <p><strong>Joyce segue firme em seu chamado, tocando profundamente o coração de quem a ouve.</strong></p>
+    <div class="extra">
+      Sua Igreja: Power Church<br />
+      Pastores: Bp. Carlos Damasceno e Bpa. Dannicoly Damasceno<br />
+      Sua Cidade: Belo Horizonte
+    </div>
+  </section>
+
+  <section class="dupla">
+    <img src="img/IMG_6904_jpg.jpg" alt="Joyce e João" />
+    <div class="texto">
+      Com uma voz única e uma presença de espírito muito especial, Joyce juntamente com seu esposo, o multi-instrumentista João Márcio, produzem seus trabalhos e ministram juntos sempre.<br /><br />
+      Uma dupla que ama o que fazem e Joyce se sente apoiada quando estão juntos.
+      <small>
+        Juntos gravaram:<br />
+        - Bondade de Deus<br />
+        - Série de vídeos “Nossa Casa” (Piano e Voz)<br />
+        - Santo Pra Sempre<br />
+        - Te Adorar é o Meu Prazer<br />
+        E muitos outros lançamentos. CONFIRA!
+      </small>
+    </div>
+  </section>
+
+  <section class="alcança">
+    <h2>JOYCE BASSO ALCANÇA</h2>
+    <div class="dados">
+      <div>3M+<br />Views no YouTube</div>
+      <div>25K+<br />Ouvintes no Spotify</div>
+    </div>
+    <div class="botoes">
+      <a href="https://www.youtube.com/@joycebasso"><img src="img/ico YouTube.png" alt="YouTube" /></a>
+      <a href="https://open.spotify.com/artist/2MVStW95WljhxqvaOlINlo?si=Jktfm4p3QyG8PGhUG8JWLQ"><img src="img/ico Spotify.webp" alt="Spotify" /></a>
+    </div>
+  </section>
+
+  <section id="lancamentos" class="lancamentos">
+    <div class="btns">
+      <h2>LANÇAMENTOS DA JOYCE</h2>
+      <a href="#">Assista Agora</a>
+      <a href="#">Santo Pra Sempre</a>
+      <a href="#">Nossa Casa</a>
+      <a href="#">Spotify</a>
+      <a href="#">YouTube</a>
+    </div>
+    <img src="img/LANCÇAMENTOS JB.png" alt="Lancamentos" />
+  </section>
+
+  <section id="agenda" class="agenda">
+    <h2>Agenda</h2>
+    <p>Joyce Basso na Sua Cidade<br />Atendendo agendas para Igrejas e Prefeituras.</p>
+    <iframe src="agenda_resultado.html"></iframe>
+  </section>
+
+  <section class="galeria">
+    <img src="img/IMG_0381.jpg" alt="Galeria" />
+    <img src="img/IMG_0422.jpg" alt="Galeria" />
+    <img src="img/IMG_0593.jpg" alt="Galeria" />
+    <img src="img/IMG_JB_PWR.jpeg" alt="Galeria" />
+    <img src="img/IMG_0655.jpg" alt="Galeria" />
+    <img src="img/DSC_0437.JPG" alt="Galeria" />
+    <img src="img/Foto 58.JPG" alt="Galeria" />
+    <img src="img/Foto JB_.jpeg" alt="Galeria" />
+    <img src="img/IMG_4865.jpg" alt="Galeria" />
+  </section>
+
+  <footer>
+    <p>© 2025 Joyce Basso. Todos os direitos reservados. JM Produções Musicais</p>
+    <img src="img/LOGO JOYCE_.PNG" alt="Logo Joyce Rodapé" />
+  </footer>
 </body>
 </html>
