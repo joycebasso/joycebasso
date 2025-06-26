@@ -8,23 +8,50 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     body { margin: 0; font-family: Arial, sans-serif; }
-    header { background: url('img/IMG_4096.jpg') center/cover no-repeat; color: white; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-    header h1 { font-size: 3em; margin: 0; }
-    nav { position: absolute; top: 20px; left: 20px; }
-    .logo { height: 40px; }
-    .section { padding: 80px 20px; text-align: center; }
-    footer { background: #111; color: white; text-align: center; padding: 20px; }
-    .social-buttons a { margin: 5px; display: inline-block; padding: 10px 15px; background: #444; color: white; text-decoration: none; border-radius: 6px; }
-    .footer-links a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
-    .footer-links a:hover { text-decoration: underline; }
+    section { padding: 60px 20px; text-align: center; }
+    header {
+      background: url('img/IMG_4096.jpg') center/cover no-repeat;
+      height: 100vh; color: white; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; text-align: center;
+    }
+    header h1 { font-size: 3em; }
+    .logo { position: absolute; top: 20px; left: 20px; height: 50px; }
+    .social-buttons a {
+      margin: 5px; padding: 10px 20px; background: #333; color: white;
+      text-decoration: none; border-radius: 5px; display: inline-block;
+    }
+    .section-bio, .section-frase, .section-lancamentos,
+    .section-agenda, .section-contato, .section-galeria {
+      text-align: center;
+    }
+    .section-frase {
+      background: url('img/IMG_JB_PWR.jpeg') center/cover no-repeat;
+      color: white; font-family: "Matura MT Script Capitals", cursive;
+      font-size: 1.8em;
+    }
+    .section-bio { background: url('img/IMG_9536_jpg.jpg') center/cover no-repeat; color: white; }
+    .section-contato { background: url('img/IMG_0405.jpg') center/cover no-repeat; color: white; }
+    footer {
+      background: #111; color: white; padding: 30px 10px; text-align: center;
+    }
+    .footer-links a {
+      color: white; margin: 0 10px; text-decoration: none;
+      font-weight: bold;
+    }
+    .galeria img {
+      width: 180px; height: auto; margin: 5px;
+      object-fit: cover; object-position: top;
+      border-radius: 8px; transition: transform 0.3s;
+    }
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <nav>
-      <img src="img/LOGO JOYCE_.PNG" alt="Logo Joyce" class="logo" />
-    </nav>
+    <img src="img/LOGO JOYCE_.PNG" alt="Logo Joyce" class="logo">
     <h1>Joyce Basso</h1>
     <div class="social-buttons">
       <a href="https://www.instagram.com/joycebasso" target="_blank">Instagram</a>
@@ -34,9 +61,68 @@
     </div>
   </header>
 
-  <section class="section" style="background: #f4f4f4;">
-    <h2>EM CONSTRUÇÃO</h2>
-    <p>O site completo de Joyce Basso estará disponível em breve.</p>
+  <section class="section-bio">
+    <h2>Bio</h2>
+    <p>Joyce Basso é cantora, compositora e pastora na Power Church em Belo Horizonte.
+    Com uma voz marcante e um talento lapidado desde a infância na igreja, Joyce Basso vem se destacando na música gospel brasileira.
+    Cantora desde pequena, Joyce começou sua trajetória gravando em estúdios e atuando como backing-vocal em diversos projetos.
+    Hoje, como pastora auxiliar na Power Church em Belo Horizonte — uma igreja relevante que tem alcançado e influenciado milhares de pessoas pelo Brasil.
+    <strong>Joyce segue firme em seu chamado, tocando profundamente o coração de quem a ouve.</strong>
+    </p>
+    <hr style="width: 80%; margin: 20px auto;" />
+    <p>Sua Igreja: Power Church<br/>Pastores: Bp. Carlos Damasceno e Bpa. Dannicoly Damasceno<br/>Sua Cidade: Belo Horizonte</p>
+  </section>
+
+  <section class="section-frase">
+    <p>“Amo servir minha igreja local e estar coberta pelos meus pais espirituais que me enviam para cumprir meu chamado pelo Brasil”</p>
+  </section>
+
+  <section class="section-lancamentos">
+    <h2>Lançamentos</h2>
+    <img src="img/LANÇAMENTOS JB.png" alt="Lançamento Principal" width="300"/>
+    <br/>
+    <img src="img/IMG_4865.jpg" alt="Foto Secundária" width="200"/>
+    <p><strong>Bondade de Deus</strong><br/><em>Alcançamos Mais de 3 milhões no YouTube 100% orgânico.</em></p>
+    <div class="social-buttons">
+      <a href="https://www.youtube.com/watch?v=SFrnX8bLqKs" target="_blank">Assista Agora</a>
+      <a href="https://www.youtube.com/watch?v=Y9eGuXtshNI" target="_blank">Santo Pra Sempre</a>
+      <a href="https://www.youtube.com/watch?v=WCVFg1CkNvo&list=PL_3mX5zD6f7MWLsTqH658b19sFCt0Sf8e" target="_blank">Nossa Casa Playlist</a>
+      <a href="https://open.spotify.com/intl-pt/artist/2MVStW95WljhxqvaOlINlo?si=6ipEcR8uQi6ExEEiN4KTqg" target="_blank">Spotify</a>
+      <a href="https://www.youtube.com/@joycebasso" target="_blank">YouTube</a>
+    </div>
+  </section>
+
+  <section class="section-agenda">
+    <h2>Agenda</h2>
+    <iframe src="agenda_resultado.html" style="width:100%;height:300px;border:none;"></iframe>
+  </section>
+
+  <section class="section-contato">
+    <h2>Contato</h2>
+    <a href="https://wa.me/5531993063266" class="social-buttons" target="_blank">Clique e entre em contato já!</a>
+    <form action="mailto:jmcontato04@gmail.com" method="POST" enctype="text/plain" style="margin-top: 20px;">
+      <input type="text" name="nome" placeholder="Nome" required><br><br>
+      <input type="email" name="email" placeholder="E-mail" required><br><br>
+      <input type="tel" name="telefone" placeholder="Telefone"><br><br>
+      <textarea name="mensagem" placeholder="Digite sua mensagem..." rows="5" cols="40" required></textarea><br><br>
+      <input type="submit" value="Enviar" />
+    </form>
+  </section>
+
+  <section class="section-galeria">
+    <h2>Galeria</h2>
+    <div class="galeria">
+      <a href="img/IMG_9536_jpg.jpg" target="_blank"><img src="img/IMG_9536_jpg.jpg"></a>
+      <a href="img/IMG_0593.jpg" target="_blank"><img src="img/IMG_0593.jpg"></a>
+      <a href="img/IMG_JB_PWR.jpeg" target="_blank"><img src="img/IMG_JB_PWR.jpeg"></a>
+      <a href="img/IMG_4865.jpg" target="_blank"><img src="img/IMG_4865.jpg"></a>
+      <a href="img/IMG_0655.jpg" target="_blank"><img src="img/IMG_0655.jpg"></a>
+      <a href="img/IMG_0582.jpg" target="_blank"><img src="img/IMG_0582.jpg"></a>
+      <a href="img/Foto (3 de 28).JPG" target="_blank"><img src="img/Foto (3 de 28).JPG"></a>
+      <a href="img/DSC_0437.JPG" target="_blank"><img src="img/DSC_0437.JPG"></a>
+      <a href="img/01 FOTO.png" target="_blank"><img src="img/01 FOTO.png"></a>
+      <a href="img/IMG_6898_jpg.jpg" target="_blank"><img src="img/IMG_6898_jpg.jpg"></a>
+    </div>
   </section>
 
   <footer>
