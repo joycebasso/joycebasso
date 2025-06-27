@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joyce Basso</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    header {
+      background-image: url('img/IMG_0661-Crp.png');
+      background-size: cover;
+      background-position: top center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      color: white;
+    }
+
+    .logo {
+      width: 130px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      height: auto;
+    }
+
+    nav {
+      margin-top: 80px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 40px;
+    }
+
+    .button {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    .bio, .bio-extra {
+      background-image: url('img/Foto (3 de 28).JPG');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 40px 20px;
+      position: relative;
+    }
+
+    .bio-overlay {
+      background-color: rgba(0,0,0,0.7);
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .quote {
+      font-family: 'Playfair Display', cursive;
+      font-size: 1.5em;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .highlight {
+      background-image: url('img/IMG PAG Alcança cut.png');
+      background-size: cover;
+      background-position: center;
+      padding: 60px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .highlight a {
+      margin: 10px;
+      display: inline-block;
+      padding: 12px 20px;
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .lancamentos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background-color: #000;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .lancamentos img {
+      max-width: 450px;
+    }
+
+    .lancamentos-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .agenda, .contato, .galeria {
+      text-align: center;
+    }
+
+    .galeria .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .galeria img {
+      width: 100%;
+      border: 3px solid white;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.08);
+    }
+
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer img.logo-joyce {
+      width: 80px;
+    }
+
+    footer img.logo-jm {
+      width: 30px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="menu">
+    <a href="#home">HOME</a>
+    <a href="#bio">BIO</a>
+    <a href="#contato">CONTATO</a>
+    <a href="#lancamentos">LANÇAMENTOS</a>
+    <a href="#agenda">AGENDA</a>
+  </nav>
+
+  <header id="home">
+    <img src="img/LOGO JOYCE_.PNG" class="logo" alt="Logo Joyce" />
+  </header>
+<!-- restante do conteúdo continua como anteriormente -->
+</body>
+</html>

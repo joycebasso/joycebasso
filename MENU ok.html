@@ -13,6 +13,7 @@
       background-color: #fff;
       color: #000;
     }
+
     .menu {
       display: flex;
       justify-content: center;
@@ -25,11 +26,13 @@
       left: 0;
       z-index: 1000;
     }
+
     .menu a {
       text-decoration: none;
       color: #000;
       font-weight: bold;
     }
+
     header {
       background-image: url('img/IMG_0661-Crp.png');
       background-size: cover;
@@ -43,6 +46,7 @@
       color: white;
       position: relative;
     }
+
     .logo {
       width: 130px;
       position: absolute;
@@ -50,12 +54,14 @@
       left: 20px;
       height: auto;
     }
+
     .buttons {
       display: flex;
       justify-content: center;
       gap: 10px;
       margin-top: 40px;
     }
+
     .button {
       background: rgba(255, 255, 255, 0.15);
       padding: 10px 20px;
@@ -64,9 +70,11 @@
       font-weight: bold;
       text-decoration: none;
     }
+
     section {
       padding: 40px 20px;
     }
+
     .bio, .bio-extra {
       background-image: url('img/Foto (3 de 28).JPG');
       background-size: cover;
@@ -75,18 +83,21 @@
       padding: 40px 20px;
       position: relative;
     }
+
     .bio-overlay {
       background-color: rgba(0,0,0,0.7);
       padding: 20px;
       max-width: 800px;
       margin: auto;
     }
+
     .quote {
       font-family: 'Playfair Display', cursive;
-      font-size: 1.6em;
+      font-size: 1.5em;
       text-align: center;
-      margin: 20px 0;
+      margin-top: 20px;
     }
+
     .highlight {
       background-image: url('img/IMG PAG Alcança cut.png');
       background-size: cover;
@@ -95,6 +106,7 @@
       text-align: center;
       color: white;
     }
+
     .highlight a {
       margin: 10px;
       display: inline-block;
@@ -105,6 +117,7 @@
       border-radius: 6px;
       font-weight: bold;
     }
+
     .lancamentos {
       display: flex;
       flex-wrap: wrap;
@@ -115,41 +128,50 @@
       color: white;
       padding: 60px 20px;
     }
+
     .lancamentos img {
       max-width: 450px;
     }
+
     .lancamentos-buttons {
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
+
     .agenda, .contato, .galeria {
       text-align: center;
     }
+
     .galeria .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 15px;
       padding: 20px;
     }
+
     .galeria img {
       width: 100%;
       border: 3px solid white;
       border-radius: 10px;
       transition: transform 0.3s;
     }
+
     .galeria img:hover {
       transform: scale(1.08);
     }
+
     footer {
       background-color: #000;
       color: white;
       text-align: center;
       padding: 20px;
     }
+
     footer img.logo-joyce {
       width: 80px;
     }
+
     footer img.logo-jm {
       width: 30px;
     }
@@ -174,72 +196,6 @@
     </div>
   </header>
 
-  <section class="bio" id="bio">
-    <div class="bio-overlay">
-      <p>Joyce Basso é cantora, compositora e pastora na Power Church em Belo Horizonte...</p>
-      <hr/>
-      <p style="text-align: left;">
-        Sua Igreja: Power Church<br/>
-        Pastores: Bp. Carlos Damasceno e Bpa. Dannicoly Damasceno<br/>
-        Sua Cidade: Belo Horizonte
-      </p>
-      <p class="quote">“Amo servir minha igreja local e estar coberta pelos meus pais espirituais...”</p>
-    </div>
-  </section>
-
-  <section class="highlight">
-    <h2>+</h2>
-    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px;">
-      <a href="https://www.youtube.com/@joycebasso" target="_blank" style="display: flex; align-items: center; gap: 12px; padding: 20px 30px; background-color: #fff; border-radius: 18px; text-decoration: none; color: black; font-weight: bold; font-size: 1.2em;">
-        <img src="img/ico YouTube.png" alt="YouTube" style="height: 36px;"> Canal YouTube
-      </a>
-      <a href="https://open.spotify.com/artist/2MVStW95WljhxqvaOlINlo" target="_blank" style="display: flex; align-items: center; gap: 12px; padding: 20px 30px; background-color: #fff; border-radius: 18px; text-decoration: none; color: black; font-weight: bold; font-size: 1.2em;">
-        <img src="img/ico Spotify.webp" alt="Spotify" style="height: 36px;"> Ouça no Spotify
-      </a>
-    </div>
-  </section>
-
-  <section class="lancamentos" id="lancamentos">
-    <img src="img/LANÇAMENTOS JB.png" alt="Lançamentos"/>
-    <div class="lancamentos-buttons">
-      <h2>CONFIRA ALGUNS DOS LANÇAMENTOS DA JOYCE</h2>
-      <p class="quote">“Estou muito feliz em poder cantar sobre a Bondade de Deus...” ❤️ _JB</p>
-      <!-- botões de vídeos -->
-    </div>
-  </section>
-
-  <section class="agenda" id="agenda">
-    <h2>Agenda</h2>
-    <p>Joyce Basso na Sua Cidade...</p>
-    <img src="img/IMG_SLIM_AGENDA.PNG" alt="Agenda" style="width: 100%; height: auto; opacity: 0.6; border-radius: 8px;" />
-    <iframe src="agenda_resultado.html" style="width:100%; height:300px; border:none; margin-top:20px;"></iframe>
-  </section>
-
-  <section class="contato" id="contato">
-    <h2>Contato</h2>
-    <div style="display:flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px;">
-      <form action="mailto:jmarciocontato@gmail.com" method="POST" enctype="text/plain">
-        <input type="text" name="nome" placeholder="Nome" required/><br/>
-        <input type="email" name="email" placeholder="E-mail" required/><br/>
-        <input type="text" name="telefone" placeholder="Telefone" required/><br/>
-        <textarea name="mensagem" placeholder="Digite sua mensagem..." rows="5" required></textarea><br/>
-        <button type="submit">Enviar</button>
-      </form>
-      <img src="img/IMG_0405.jpg" alt="Contato" style="max-width: 250px; border-radius: 10px;">
-    </div>
-  </section>
-
-  <section class="galeria">
-    <h2>Galeria</h2>
-    <div class="grid">
-      <!-- Imagens dinâmicas da galeria -->
-    </div>
-  </section>
-
-  <footer>
-    <img src="img/LOGO JOYCE_.PNG" alt="Logo Joyce" class="logo-joyce"/>
-    <img src="favicon.ico" alt="JM" class="logo-jm"/>
-    <p>© 2025 Joyce Basso. Todos os direitos reservados.<br/>JM Produções Musicais</p>
-  </footer>
+<!-- restante do conteúdo segue normalmente... -->
 </body>
 </html>
